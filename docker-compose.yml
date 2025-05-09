@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  lt-server:
+    image: vyacheslavbadaev/localtunnel-fork-server:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: ["node", "-r", "esm", "./bin/server", "--port", "3000", "--domain", "lt.server-badaev-dev.work"]
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+      DEBUG: localtunnel*
