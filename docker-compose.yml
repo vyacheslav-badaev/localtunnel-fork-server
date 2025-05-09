@@ -13,7 +13,7 @@ services:
       NODE_ENV: production
       DEBUG: localtunnel*
     labels:
-      - traefik.http.routers.https-wildcard-lt-server.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.lt.server-badaev-dev.work`)
+      - 'traefik.http.routers.https-wildcard-lt-server.rule=HostRegexp(`{subdomain:[a-z0-9-]+}.lt.server-badaev-dev.work`) && PathPrefix(`/`)'
       - traefik.http.routers.https-wildcard-lt-server.entryPoints=https
       - traefik.http.routers.https-wildcard-lt-server.tls.certresolver=letsencrypt
       - traefik.http.routers.https-wildcard-lt-server.tls=true
