@@ -12,7 +12,7 @@ services:
     environment:
       NODE_ENV: production
       DEBUG: localtunnel*
-    labels:
-      - "traefik.http.routers.https-0-zg0s8gsgog4cgkoksgwcwkwc-lt-server.middlewares=gzip,lt-ws"
-      - "traefik.http.middlewares.lt-ws.headers.customrequestheaders.Connection=Upgrade"
-      - "traefik.http.middlewares.lt-ws.headers.customrequestheaders.Upgrade=websocket"
+    # labels:
+    #   - "traefik.http.routers.https-0-zg0s8gsgog4cgkoksgwcwkwc-lt-server.middlewares=gzip,lt-ws"
+    #   - "traefik.http.middlewares.lt-ws.headers.customrequestheaders.Connection=Upgrade"
+    #   - "traefik.http.middlewares.lt-ws.headers.customrequestheaders.Upgrade=websocket"
