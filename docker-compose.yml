@@ -18,3 +18,5 @@ services:
       - traefik.http.routers.https-wildcard-lt-server.tls.certresolver=letsencrypt
       - traefik.http.routers.https-wildcard-lt-server.tls=true
       - traefik.http.routers.https-wildcard-lt-server.middlewares=gzip
+      - traefik.http.routers.https-wildcard-lt-server.service=lt-server
+      - traefik.http.services.lt-server.loadbalancer.server.port=3000
